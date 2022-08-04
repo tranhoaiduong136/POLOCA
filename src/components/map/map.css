@@ -1,0 +1,120 @@
+.map-card{
+  width: 100%;
+  background-color: #DFDFDF;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+.map-card img{
+  width: 100%;
+  object-fit: cover;
+}
+.map-card button{
+  position: absolute;
+  background: none;
+}
+.map-card span{
+  /* position: absolute; */
+  font-size: 40px;
+  color: var(--second-color-red);
+  transition: 0.2s ease-in-out;
+}
+.map-card span:nth-child(2){
+  z-index: 20;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 3px 9px #00000020;
+  text-align: left;
+  position: absolute;
+  display: none;
+  background: var(--main-bg);
+  width: max-content;
+  font-size: 15px;
+  color: var(--txt-color-light);
+}
+.map-card span:nth-child(2) .available{
+  color: var(--second-color-green);
+}
+.map-card span:nth-child(2) .unavailable{
+  color: var(--second-color-red);
+}
+.map-card span:hover{
+  transform: scale(1.2);
+}
+.map-card span:hover:nth-child(2){
+  transform: scale(1);
+}
+.map-card > button:hover > span:nth-child(2){
+  display: block;
+}
+#patient-one{
+  top: 50%;
+  right: 50%;
+}
+#patient-two{
+  top: 40%;
+  right: 60%;
+}
+#patient-three{
+  top: 50%;
+  right: 65%;
+}
+#patient-four{
+  top: 52%;
+  right: 40%;
+}
+#patient-five{
+  top: 45%;
+  right: 57%;
+}
+#patient-six{
+  top: 40%;
+  right: 50%;
+}
+#patient-seven{
+  top: 60%;
+  right: 60%;
+}
+#patient-eight{
+  top: 35%;
+  right: 45%;
+}
+.place{
+  width: 100%;
+  transform: rotate(-3deg) scale(1.14);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.road{
+  background-color: #F8F8F8;
+  padding: 5px;
+}
+.upper-road,
+.lower-road{
+  width: 100%;
+}
+.left-road,
+.mid-road,
+.right-road{
+  writing-mode: vertical-rl;
+}
+.hospital-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.hospital{
+  height: 220px;
+  background-color: #B8B8B8;
+}
+.left-hospital{
+  width: 330px;
+}
+.right-hospital{
+  width: 100px;
+}
+img{
+  object-fit: cover;
+}

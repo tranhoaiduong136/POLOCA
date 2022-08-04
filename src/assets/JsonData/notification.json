@@ -1,0 +1,14 @@
+[
+    {
+        "icon": "bx bx-error",
+        "content": "Patient A is in emergency"
+    },
+    {
+        "icon": "bx bx-package",
+        "content": "Need more supplies for a specific treatment"
+    },
+    {
+        "icon": "bx bx-error",
+        "content": "Patient B shows up well with the treatment"
+    }
+]

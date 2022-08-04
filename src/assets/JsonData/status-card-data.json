@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "bx bx-clinic",
+        "count": "100",
+        "title": "Cases",
+        "description": "Tổng bệnh nhân"
+    },
+    {
+        "icon": "bx bxs-capsule",
+        "count": "30",
+        "title": "Resources",
+        "description": "Nhân lực"
+    },
+    {
+        "icon": "bx bx-pulse",
+        "count": "60",
+        "title": "Diagnoses",
+        "description": "Đang chuẩn đoán"
+    },
+    {
+        "icon": "bx bx-check-square",
+        "count": "41",
+        "title": "Treatments",
+        "description": "Đã điều trị"
+    }
+]
