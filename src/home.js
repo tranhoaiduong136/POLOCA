@@ -56,37 +56,38 @@ login(){
 
   render() {
      return (
-       <div>
+      //  <div>
 
-         <div>
-          {this.state.loggedIn == "admin"?
-            <Layout/>
-          :
-          <>
-            {this.state.loggedIn == "guest"?
-              <LayoutGuest/>
-              :
-              <div className="container">
-                  <div className="login-card">
-                    <div className="logo">
-                        <img src="favicon.png" alt="company logo" />
-                    </div>
-                    <div className="form">
-                      <label htmlFor="name">Email:</label>
-                      <input placeholder="admin / guest" type="text" id="name" onInput={key => this.changeEmail(key)} onKeyPress={key => this.authen(key)} />
+      //    <div>
+      //     {this.state.loggedIn == "admin"?
+      //       <Layout/>
+      //     :
+      //     <>
+      //       {this.state.loggedIn == "guest"?
+      //         <LayoutGuest/>
+      //         :
+      //         <div className="container">
+      //             <div className="login-card">
+      //               <div className="logo">
+      //                   <img src="favicon.png" alt="company logo" />
+      //               </div>
+      //               <div className="form">
+      //                 <label htmlFor="name">Email:</label>
+      //                 <input placeholder="admin / guest" type="text" id="name" onInput={key => this.changeEmail(key)} onKeyPress={key => this.authen(key)} />
 
-                      <label htmlFor="passwd">Password:</label>
-                      <input placeholder="admin / guest" type="text" id="name" onInput={key => this.changePassword(key)} onKeyPress={key => this.authen(key)} />
+      //                 <label htmlFor="passwd">Password:</label>
+      //                 <input placeholder="admin / guest" type="text" id="name" onInput={key => this.changePassword(key)} onKeyPress={key => this.authen(key)} />
 
-                      <button onClick={this.login}>Login</button>
-                    </div>
-                  </div>
-                </div>
-            }
-            </>
-          }
-         </div>
-       </div>
+      //                 <button onClick={this.login}>Login</button>
+      //               </div>
+      //             </div>
+      //           </div>
+      //       }
+      //       </>
+      //     }
+      //    </div>
+      //  </div>
+      <Layout/>
      );
   }
 }
