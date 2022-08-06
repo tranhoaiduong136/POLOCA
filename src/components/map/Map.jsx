@@ -41,7 +41,7 @@ const Map = (props) => {
   }, [onValue]);
   return (
     <div className="map-card">
-      <img src="map.png" />
+      < img src="map.png" alt=""/>
       {data
         ? Object.keys(data).map((key, index) => {
             return (
@@ -56,10 +56,10 @@ const Map = (props) => {
                   <br />
                   <b
                     className={
-                      data[key] == "true" ? "available" : "unavailable"
+                      data[key] === "true" ? "available" : "unavailable"
                     }
                   >
-                    {data[key] == "true" ? "available" : "unavailable"}
+                    {data[key] === "true" ? "available" : "unavailable"}
                   </b>
                 </span>
               </button>

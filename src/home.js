@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import Layout from './components/layout/Layout';
-import LayoutGuest from './components/layout/LayoutGuest';
+
 import './home.css'
 
 class Home extends Component {
@@ -33,22 +33,22 @@ class Home extends Component {
   });
 }
 authen(key){
-  if(key.charCode == 13 && this.state.name.toLowerCase() == 'admin' && this.state.psswd.toLowerCase() == 'admin')
+  if(key.charCode === 13 && this.state.name.toLowerCase() === 'admin' && this.state.psswd.toLowerCase() === 'admin')
   this.setState({
     loggedIn: "admin"
   });
-  else if(key.charCode == 13 && this.state.name.toLowerCase() == 'guest' && this.state.psswd.toLowerCase() == 'guest')
+  else if(key.charCode === 13 && this.state.name.toLowerCase() === 'guest' && this.state.psswd.toLowerCase() === 'guest')
   this.setState({
     loggedIn: "guest"
   });
 }
 
 login(){
-  if(this.state.name.toLowerCase() == 'admin' && this.state.psswd.toLowerCase() == 'admin')
+  if(this.state.name.toLowerCase() === 'admin' && this.state.psswd.toLowerCase() === 'admin')
   this.setState({
     loggedIn: "admin"
   });
-  else if(this.state.name.toLowerCase() == 'guest' && this.state.psswd.toLowerCase() == 'guest')
+  else if(this.state.name.toLowerCase() === 'guest' && this.state.psswd.toLowerCase() === 'guest')
   this.setState({
     loggedIn: "guest"
   });
@@ -59,11 +59,11 @@ login(){
       //  <div>
 
       //    <div>
-      //     {this.state.loggedIn == "admin"?
+      //     {this.state.loggedIn === "admin"?
       //       <Layout/>
       //     :
       //     <>
-      //       {this.state.loggedIn == "guest"?
+      //       {this.state.loggedIn === "guest"?
       //         <LayoutGuest/>
       //         :
       //         <div className="container">
