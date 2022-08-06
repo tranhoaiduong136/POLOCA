@@ -38,7 +38,7 @@ const Map = (props) => {
     onValue(getData, (snapshot) => {
       fetchData();
     });
-  }, [onValue]);
+  }, []);
   return (
     <div className="map-card">
       < img src="map.png" alt=""/>
