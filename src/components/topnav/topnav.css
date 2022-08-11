@@ -47,7 +47,10 @@
     align-items: center;
     padding: 20px;
 }
-
+.btn{
+    width: 100%;
+    background-color: var(--second-bg);
+}
 .notification-item:hover {
     background-color: var(--second-bg);
 }

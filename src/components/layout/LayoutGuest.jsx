@@ -2,10 +2,10 @@ import React, {useEffect} from 'react'
 
 import './layout.css'
 
-import Sidebar from '../sidebar/Sidebar'
+// import Sidebar from '../sidebar/Sidebar'
 import SidebarGuest from '../sidebar/SidebarGuest'
 import TopNav from '../topnav/TopNav'
-import Routes from '../Routes'
+// import Routes from '../Routes'
 import RoutesGuest from '../RoutesGuest'
 
 import { BrowserRouter, Route } from 'react-router-dom'

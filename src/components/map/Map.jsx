@@ -45,8 +45,8 @@ const Map = (props) => {
       {data
         ? Object.keys(data).map((key, index) => {
             return (
-              <button id={`patient-${indexcss[index]}`}>
-                <span class="material-symbols-sharp" title={`Patient ${key}`}>
+              <button id={`patient-${indexcss[index]}`} key={index}>
+                <span className="material-symbols-sharp" title={`Patient ${key}`}>
                   person_pin_circle
                 </span>
                 <span>
