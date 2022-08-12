@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 import { Link } from 'react-router-dom'
 
@@ -15,6 +15,7 @@ import Table from '../components/table/Table'
 // import Badge from '../components/badge/Badge'
 
 import statusCards from '../assets/JsonData/status-card-data.json'
+import customerList from '../assets/JsonData/customers-list.json'
 
 const chartOptions = {
     series: [{
@@ -63,30 +64,24 @@ const chartOptions = {
 
 const topCustomers = {
     head: [
-        'patient',
-        'medicine',
-        'treatment start'
-    ],
-    body: [
-      {"username":"Nguyen Ngoc Quyet","medicine":"Atenolol","time":"30/05/2022"},
-      {"username":"Le Kim Toan","medicine":"Squash Zucchini","time":"26/03/2022"},
-      {"username":"Nguyen Chi Cong","medicine":"Xyntha","time":"20/05/2022"},
-      {"username":"Trieu Phuoc Nhan","medicine":"Diaper Rash Paste","time":"30/04/2022"},
-      {"username":"Ho Trong Duy","medicine":"Flavoxate Hydrochloride","time":"02/02/2022"},
+        'Patient',
+        'Room',
+        'Status'
     ]
+    // body: [
+    //   {"username":"Nguyen Ngoc Quyet","medicine":"Atenolol","time":"30/05/2022"},
+    //   {"username":"Le Kim Toan","medicine":"Squash Zucchini","time":"26/03/2022"},
+    //   {"username":"Nguyen Chi Cong","medicine":"Xyntha","time":"20/05/2022"},
+    //   {"username":"Trieu Phuoc Nhan","medicine":"Diaper Rash Paste","time":"30/04/2022"},
+    //   {"username":"Ho Trong Duy","medicine":"Flavoxate Hydrochloride","time":"02/02/2022"},
+    // ]
 }
+
 
 const renderCusomerHead = (item, index) => (
     <th key={index}>{item}</th>
 )
 
-const renderCusomerBody = (item, index) => (
-    <tr key={index}>
-        <td>{item.username}</td>
-        <td>{item.medicine}</td>
-        <td>{item.time}</td>
-    </tr>
-)
 
 // const latestOrders = {
 //     header: [
@@ -159,9 +154,16 @@ const renderCusomerBody = (item, index) => (
 // )
 
 const Dashboard = () => {
-
+    const [activeRow, setActiveRow] = useState(false);
     const themeReducer = useSelector(state => state.ThemeReducer.mode)
-
+    const renderCusomerBody = (item, index) => (
+        <tr key={index} className={activeRow === index?'active-row':''}>
+            <td>{item.name}</td>
+            <td>{item.room}</td>
+            <td> <span className={item.status === "Normal"? "normal":(item.status === "Not Normal")? "n-normal"
+            :(item.status === "Critical")? "crit":(item.status === "Unavailable")? "una":""}>{item.status}</span></td>
+        </tr>
+    )
     return (
         <div>
             <h2 className="page-header">Dashboard</h2>
@@ -201,13 +203,14 @@ const Dashboard = () => {
                 <div className="col-4 col-md-12">
                     <div className="card">
                         <div className="card__header">
-                            <h3>Remarkable Patients</h3>
+                            <h3>Remarkable Online Patients</h3>
                         </div>
                         <div className="card__body">
                             <Table
+                                activeRow = {activeRow}
                                 headData={topCustomers.head}
                                 renderHead={(item, index) => renderCusomerHead(item, index)}
-                                bodyData={topCustomers.body}
+                                bodyData={customerList}
                                 renderBody={(item, index) => renderCusomerBody(item, index)}
                             />
                         </div>
@@ -228,7 +231,7 @@ const Dashboard = () => {
                                 bodyData={latestOrders.body}
                                 renderBody={(item, index) => renderOrderBody(item, index)}
                             />*/}
-                            <Map />
+                            <Map setActiveRow = {setActiveRow}/>
                         </div>
                         <div className="card__footer">
                             <Link to='/track'>view map</Link>
