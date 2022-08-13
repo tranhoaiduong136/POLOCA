@@ -1,7 +1,7 @@
 [
-{"id":1139,"name":"Tran Hoai Duong","gender":"Male","room":"202A1","status":"Normal","time":"11/8/2022 5:31","note":"Normal Flu"},
-{"id": 1023, "name":"Nguyen Khac Duy","gender":"Male","room":"202A1","status":"Not Normal","time":"11/8/2022 5:32","note":"Digestive Problems"},
-{"id": 1024,"name":"Do Dat", "gender":"Male","room":"202A1","status":"Unavailable","time":"11/8/2022 5:7:31","note":"Headache"},
-{"id": 1025, "name":"Do Phat", "gender":"Male","room":"202A1","status":"Normal","time":"11/8/2022 8:32","note":"Daily monitoring"},
-{"id": 1069, "name":"Nguyen Song Dat","gender":"Male","room":"203A1","status":"Critical","time":"11/8/2022 9:31","note":"Heart disease"}
+{"id":1139,"name":"Tran Hoai Duong","gender":"Male","room":"202A1","status":"Normal","time":"11/8/2022 5:31","note":"Normal Flu","days" : "3"},
+{"id": 1023, "name":"Nguyen Khac Duy","gender":"Male","room":"202A1","status":"Not Normal","time":"11/8/2022 5:32","note":"Digestive Problems","days" : "20"},
+{"id": 1024,"name":"Do Dat", "gender":"Male","room":"202A1","status":"Unavailable","time":"11/8/2022 5:7:31","note":"Headache","days" : "12"},
+{"id": 1025, "name":"Do Phat", "gender":"Male","room":"202A1","status":"Normal","time":"11/8/2022 8:32","note":"Daily monitoring","days" : "15"},
+{"id": 1069, "name":"Nguyen Song Dat","gender":"Male","room":"203A1","status":"Critical","time":"11/8/2022 9:31","note":"Heart disease","days" : "35"}
 ]

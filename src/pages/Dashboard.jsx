@@ -65,7 +65,7 @@ const chartOptions = {
 const topCustomers = {
     head: [
         'Patient',
-        'Room',
+        'Days',
         'Note'
     ]
     // body: [
@@ -160,7 +160,7 @@ const Dashboard = () => {
     const renderCusomerBody = (item, index) => (
         <tr key={index} className={activeRow === index?'active-row':''}>
             <td>{item.name}</td>
-            <td>{item.room}</td>
+            <td>{item.days}</td>
             {/* <td> <span className={item.status === "Normal"? "normal":(item.status === "Not Normal")? "n-normal"
             :(item.status === "Critical")? "crit":(item.status === "Unavailable")? "una":""}>{item.status}</span></td> */}
             <td>{item.note}</td>
