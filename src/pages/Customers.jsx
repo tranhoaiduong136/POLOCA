@@ -133,41 +133,53 @@ const Customers = (props) => {
             }}
           >
             <label
-              htmlFor="idName"
+              htmlFor="Name"
               style={{
-                paddingBottom: "6px",
-                paddingTop: "7px",
+                marginBottom: 5,
+                fontSize: 16,
               }}
             >
               Name:
             </label>
-            <input name="idName" placeholder={"name"} />
+            <input name="Name" placeholder={"name"} style={{marginBottom: 10, border: '1px solid #0002', fontSize: 16, borderRadius: 5}}/>
             <label
-              htmlFor="idId"
+              htmlFor="Id"
               style={{
-                paddingBottom: "6px",
-                paddingTop: "15px",
+                marginBottom: 5,
+                fontSize: 16,
               }}
             >
               Poloband Id:
             </label>
-            <input name="idId" placeholder={"id"} />
+            <input name="Id" placeholder={"id"} style={{marginBottom: 10, border: '1px solid #0002', fontSize: 16, borderRadius: 5}}/>
 
             <label
-              htmlFor="idGender"
+              htmlFor="Gender"
               style={{
-                paddingBottom: "6px",
-                paddingTop: "15px",
+                marginBottom: 5,
+                fontSize: 16,
               }}
             >
               Gender:
             </label>
-            <select name="idGender" placeholder={"gender"}>
+            <select name="Gender" placeholder={"gender"} style={{marginBottom: 20, border: '1px solid #0002', fontSize: 16, borderRadius: 5}}>
             <option value="None">None</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             </select>
-            <button type="submit" disabled>Add patient</button>
+            <button 
+              style={{
+                backgroundColor: "#349eff",
+                color: "#fff",
+                height: 35,
+                padding: 10,
+                borderRadius: "50%",
+                margin: '0 auto',
+              }}
+              type="submit" disabled
+            >
+                Add patient
+            </button>
           </form>
         </Modal>
       </div>
