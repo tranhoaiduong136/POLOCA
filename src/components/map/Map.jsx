@@ -17,12 +17,16 @@ import "../../home.css"
 const place = [
   {lon: 53 , lat : 50},
   {lon: 49, lat : 51},
-  {lon: 48 , lat : 53.5}
+  {lon: 48 , lat : 53.5},
+  {lon: 49.5 , lat : 52.5},
+  {lon: 49 , lat : 50}
 ]
 const place2 = [
   {lon: 51 , lat : 54},
   {lon: 54 , lat : 54},
-  {lon: 52 , lat : 55}
+  {lon: 52 , lat : 55},
+  {lon: 53 , lat : 53},
+  {lon: 48 , lat : 53.5}
 ]
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
