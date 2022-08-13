@@ -16,7 +16,7 @@ const Dashboard = () => {
                             <h3>map</h3>
                         </div>
                         <div className="card__body">
-                            <Map />
+                           <Map setActiveRow = {() =>{}}/>
                         </div>
                         <div className="card__footer">
                             <span>University Medical Center, Ho Chi Minh City</span>

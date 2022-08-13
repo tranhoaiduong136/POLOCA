@@ -66,7 +66,7 @@ const topCustomers = {
     head: [
         'Patient',
         'Room',
-        'Status'
+        'Note'
     ]
     // body: [
     //   {"username":"Nguyen Ngoc Quyet","medicine":"Atenolol","time":"30/05/2022"},
@@ -156,12 +156,14 @@ const renderCusomerHead = (item, index) => (
 const Dashboard = () => {
     const [activeRow, setActiveRow] = useState(false);
     const themeReducer = useSelector(state => state.ThemeReducer.mode)
+    
     const renderCusomerBody = (item, index) => (
         <tr key={index} className={activeRow === index?'active-row':''}>
             <td>{item.name}</td>
             <td>{item.room}</td>
-            <td> <span className={item.status === "Normal"? "normal":(item.status === "Not Normal")? "n-normal"
-            :(item.status === "Critical")? "crit":(item.status === "Unavailable")? "una":""}>{item.status}</span></td>
+            {/* <td> <span className={item.status === "Normal"? "normal":(item.status === "Not Normal")? "n-normal"
+            :(item.status === "Critical")? "crit":(item.status === "Unavailable")? "una":""}>{item.status}</span></td> */}
+            <td>{item.note}</td>
         </tr>
     )
     return (

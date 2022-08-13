@@ -6,6 +6,7 @@ import customerList from "../assets/JsonData/customers-list.json";
 
 import Modal from "react-modal";
 
+
 const customerTableHead = [
   "ID",
   "Name",
@@ -20,6 +21,8 @@ const renderHead = (item, index) => <th key={index}>{item}</th>;
 const Customers = (props) => {
   const {activeRow} = props;
   const [modalIsOpen, setIsOpen] = useState(false);
+ 
+
   const renderBody = (item, index) => (
     <tr key={index} className={activeRow === index?'active-row':''}>
       <td>{item.id}</td>
@@ -131,46 +134,58 @@ const Customers = (props) => {
               flexDirection: "column",
               marginLeft: "10px",
             }}
-          >
-            <label
-              htmlFor="idName"
-              style={{
-                paddingBottom: "6px",
-                paddingTop: "7px",
-              }}
             >
-              Name:
-            </label>
-            <input name="idName" placeholder={"name"} />
-            <label
-              htmlFor="idId"
-              style={{
-                paddingBottom: "6px",
-                paddingTop: "15px",
-              }}
-            >
-              Poloband Id:
-            </label>
-            <input name="idId" placeholder={"id"} />
-
-            <label
-              htmlFor="idGender"
-              style={{
-                paddingBottom: "6px",
-                paddingTop: "15px",
-              }}
-            >
-              Gender:
-            </label>
-            <select name="idGender" placeholder={"gender"}>
-            <option value="None">None</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            </select>
-            <button type="submit" disabled>Add patient</button>
-          </form>
-        </Modal>
-      </div>
+              <label
+                htmlFor="Name"
+                style={{
+                  marginBottom: 5,
+                  fontSize: 16,
+                }}
+              >
+                Name:
+              </label>
+              <input name="Name" placeholder={"name"} style={{marginBottom: 10, border: '1px solid #0002', fontSize: 16, borderRadius: 5}}/>
+              <label
+                htmlFor="Id"
+                style={{
+                  marginBottom: 5,
+                  fontSize: 16,
+                }}
+              >
+                Poloband Id:
+              </label>
+              <input name="Id" placeholder={"id"} style={{marginBottom: 10, border: '1px solid #0002', fontSize: 16, borderRadius: 5}}/>
+  
+              <label
+                htmlFor="Gender"
+                style={{
+                  marginBottom: 5,
+                  fontSize: 16,
+                }}
+              >
+                Gender:
+              </label>
+              <select name="Gender" placeholder={"gender"} style={{marginBottom: 20, border: '1px solid #0002', fontSize: 16, borderRadius: 5}}>
+              <option value="None">None</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              </select>
+              <button 
+                style={{
+                  backgroundColor: "#349eff",
+                  color: "#fff",
+                  height: 35,
+                  padding: 10,
+                  borderRadius: "50%",
+                  margin: '0 auto',
+                }}
+                type="submit" disabled
+              >
+                  Add patient
+              </button>
+            </form>
+          </Modal>
+        </div>
       <div className="row">
         <div className="col-12">
           <div className="card">
