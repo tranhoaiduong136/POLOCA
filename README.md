@@ -1,10 +1,9 @@
-# React Admin Dashboard with Multiple Themes
+# POLOCA Project
 
-    Build React Admin Dashboard with Multiple Themes | React Admin Panel CSS | ReactJS
+    Build Dashboards for hospital management
 
-# Video
-
-    https://youtu.be/q8cabjyUTVY
+# Video: 
+        
 
 # Description
 
