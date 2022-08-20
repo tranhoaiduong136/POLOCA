@@ -2,8 +2,8 @@
 
     Build Dashboards for hospital management
 
-# Video: 
-        
+# Video of our product
+       https://youtu.be/mHh8TCvFys4 
 
 # Description
 
@@ -16,6 +16,8 @@
     Boxicons: https://boxicons.com/
 
     Images: https://unsplash.com/
+    
+    Template: https://youtu.be/q8cabjyUTVY
 
 # Preview
 
